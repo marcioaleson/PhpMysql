@@ -11,6 +11,7 @@
       //Variáveis
       $x = 10;
       $y = 6;
+      echo "Operadores Aritiméticos</br>";
       echo "A soma de".$x."+"."$y"."=".($x+$y);
       echo "</br>";
       echo "A subtração de".$x."-".$y."=".($x-$y);
@@ -22,6 +23,20 @@
       echo "O mode da divisão de".$x."%".$y."=".($x%$y);
       echo "</br>";
       echo "O exponencial de".$x."**".$y."=".($x**$y);
+      echo "</br>";
+      echo "Operadores de Atribuição</br>";
+      echo "A atribuição simples de".$x."=".$y;
+      echo "</br>";
+      echo "A atribuição soma de".$x."+=".$y."=".($x+=$y);
+      echo "</br>";
+      echo "A atribuição subtração de".$x."-=".$y."=".($x-=$y);
+      echo "</br>";
+      echo "A atribuição multiplicação de".$x."*=".$y."=".($x*=$y);
+      echo "</br>";
+      echo "A atribuição divisão de".$x."/=".$y."=".($x/=$y);
+      echo "</br>";
+      echo "A atribuição modulo de".$x."%=".$y."=".($x%=$y);
+      echo "</br>";
        ?>
   <!-- JQuery -->
   <script src="js/jquery-3.1.0.min.js"></script>
