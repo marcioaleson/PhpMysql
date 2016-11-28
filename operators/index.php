@@ -13,6 +13,15 @@
       $y = 6;
       echo "A soma de".$x."+"."$y"."=".($x+$y);
       echo "</br>";
+      echo "A subtração de".$x."-".$y."=".($x-$y);
+      echo "</br>";
+      echo "A multiplicação de".$x."*".$y."=".($x*$y);
+      echo "</br>";
+      echo "A divisão de".$x."/".$y."=".($x/$y);
+      echo "</br>";
+      echo "O mode da divisão de".$x."%".$y."=".($x%$y);
+      echo "</br>";
+      echo "O exponencial de".$x."**".$y."=".($x**$y);
        ?>
   <!-- JQuery -->
   <script src="js/jquery-3.1.0.min.js"></script>
