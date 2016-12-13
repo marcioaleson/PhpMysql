@@ -12,6 +12,9 @@
     $car = array("Volvo", "BMW", "Toyota");
     //Array associativo
     $people = array('Peter' => 35, 'Ben' => 14, 'Joe' => 37 );
+    //Array numerico ordenado.
+    $numbers = array(2,4,1,5,7,0);
+    sort($numbers);
 
     echo "I like ".$car[0]. ", ".$car[1]." and ".$car[2].".";
     echo "</br>";
@@ -28,6 +31,44 @@
     foreach ($people as $key => $value) {
       # code...
       echo "Key=". $key.", Value=".$value;
+      echo "</br>";
+    }
+
+    for ($i=0; $i < count($numbers); $i++) {
+      # code...
+      echo $numbers[$i];
+      echo "</br>";
+    }
+    echo "</br>";
+    asort($people);
+
+    foreach ($people as $key => $value) {
+      # code...
+      echo "Key=".$key.", Value=".$value;
+      echo "</br>";
+    }
+    echo "</br>";
+    ksort($people);
+
+    foreach ($people as $key => $value) {
+      # code...
+      echo "Key=".$key.", Value=".$value;
+      echo "</br>";
+    }
+    echo "</br>";
+    arsort($people);
+
+    foreach ($people as $key => $value) {
+      # code...
+      echo "Key=".$key.", Value=".$value;
+      echo "</br>";
+    }
+    echo "</br>";
+    krsort($people);
+
+    foreach ($people as $key => $value) {
+      # code...
+      echo "Key=".$key.", Value=".$value;
       echo "</br>";
     }
 
