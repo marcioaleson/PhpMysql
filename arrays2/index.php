@@ -19,6 +19,17 @@
       echo $cars[2][0]."In stock: ".$cars[2][1].", sold: ".$cars[2][2]."<br>";
       echo $cars[3][0]."In stock: ".$cars[3][1].", sold: ".$cars[3][2]."<br>";
 
+      for ($i=0; $i < 4 ; $i++) {
+        # code...
+        echo "<p><b>Row number $i</b></p>";
+        echo "<ul>";
+            for ($j=0; $j <3 ; $j++) {
+              # code...
+              echo "<li>".$cars[$i][$j]."</li>";
+            }
+            echo "</ul>";
+      }
+
 
 
 ?>
