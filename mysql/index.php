@@ -7,9 +7,20 @@
     <link rel="stylesheet" type="text/css" href="css/style.css" media="screen,projection">
   </head>
   <body>
-  <?php
-  //Variáveis
-?>
+    <?php
+    $servername = "localhost:3303";
+    $username = "root";
+    $password = "";
+
+    // Create connection
+    $conn = new mysqli($servername, $username, $password);
+
+    // Check connection
+    if ($conn->connect_error) {
+        die("Connection failed: " . $conn->connect_error);
+    }
+    echo "Connected successfully";
+    ?>
   <!-- JQuery -->
   <script src="js/jquery-3.1.0.min.js"></script>
   </body>
