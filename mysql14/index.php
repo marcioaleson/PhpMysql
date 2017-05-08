@@ -14,7 +14,7 @@
     $dbname = "test";
 
     // Create connection with MySQLi Procedural
-    $conn == new mysqli_connect($servername, $username, $password, $dbname);
+    $conn == mysqli_connect($servername, $username, $password, $dbname);
     // Check connnection
     if (!$conn) {
       # code...
