@@ -1,0 +1,13 @@
+body {
+  font-family: "Lucida Grande", "Lucida Sans Unicode", Verdana, sans-serif;
+  line-height: 1.6;
+}
+
+table,tr,td {
+  border: 1px solid black;
+  border-collapse: collapse;
+}
+
+tr, td {
+  padding: 5px;
+}
