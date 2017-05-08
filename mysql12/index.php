@@ -13,7 +13,27 @@
     $password = "";
     $dbname = "test";
 
+    // Create connection
+    $conn == new mysqli($servername, $username, $password, $dbname);
+    // Check connnection
+    if ($conn->connect_error) {
+      # code...
+      die("Connection failed: ".$conn->connect_error);
+    }
 
+    $sql = "INSERT INTO MyGuests (firstname, lastname, email) VALUES ('John', 'Doe', 'john@example.com');";
+    $sql.="INSERT INTO MyGuests (firstname, lastname, email) VALUES ('Mary', 'Moe', 'mary@example.com');";
+    $sql.="INSERT INTO MyGuests (firstname, lastname, email) VALUES ('Julia', 'Dooley', 'julia@example.com');";
+
+    if ($conn->multi_query($sql) === TRUE) {
+      # code...
+      echo "New records created successfully";
+    } else {
+      # code...
+      echo "Error: ".$sql."<br>".$conn->error;
+    }
+
+    $conn->close();
 ?>
     ?>
   <!-- JQuery -->
