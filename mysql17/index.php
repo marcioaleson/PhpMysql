@@ -39,7 +39,7 @@ try {
   $stmt->execute();
 
   echo "New records created successfully";
-} catch (PDOExecption $e) {
+} catch (Execption $e) {
   echo "Error: ".$e->getMessage();
 }
 
