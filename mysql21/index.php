@@ -13,22 +13,20 @@
     $password = "";
     $dbname = "test";
 
-    //Create connection
-    $conn->mysqli_connect($servername, $username, $password, $dbname);
-    //Check connection
-    if(!$conn){
-      die("Connection failed: ".mysqli_connect_error());
-    }
+    try{
+      $conn = new PDO("mysql:host=$servername;dbname=$dbname",$username, $password);
+      //Set the PDO error mode to exception
+      $conn->setAttribute(PDO::ATTB_ERRMODE, PDO::ERRMODE_EXCEPTION);
 
-    //Sql to delete a record
-    $sql = "DELETE FROM MyGuests WHERE id=3";
+      //sql to delete a record
+      $sql = "DELETE FROM MyGuests WHERE id=3";
 
-    if(mysqli_query($conn, $sql)){
-      echo "Record deleted successfully";
-    }else{
-      echo "Error deleting record: ". mysqli_error($conn);
+      //use exec() becauseno results are returned
+      $conn->exec($sql)
+    }catch(PDOException $e){
+      echo $sql . "<br>" . $e->getMessage();
     }
-    mysqli_close($conn)
+    $conn = null;
           ?>
   <!-- JQuery -->
   <script src="js/jquery-3.1.0.min.js"></script>
