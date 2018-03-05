@@ -4,7 +4,7 @@
     <meta charset="utf-8">
     <title>AJAX and XML EXAMPLE</title>
     <script type="text/javascript">
-      function showCD(){
+      function showCD(str){
         if (str=="") {
           document.getElementById("txtHint").innerHTML = "";
           return;
@@ -21,7 +21,7 @@
             document.getElementById("txtHint").innerHTML = this.responseText;
           }
         }
-        xmlhttp.open("GET", "getcd.php="+str, true);
+        xmlhttp.open("GET", "getcd.php?q="+str, true);
         xmlhttp.send();
       }
     </script>
